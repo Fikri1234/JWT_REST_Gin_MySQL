@@ -57,7 +57,7 @@ go run main.go
 
 
 **Implement Swaggo Documentation**
-1. Open your project directory which contains the `main.go`. Generate the swagger docs with the `swag init` command that wrap in the bash `.\swaggo.sh`
+1. Open project directory which contains the `main.go`. Generate the swagger docs with the `swag init` command that wrap in the bash `.\swaggo.sh`
 ![Alt text](asset/swag_init_sh.PNG?raw=true "Swagg init")
 
 2. Import __swaggo__ dependencies:
@@ -160,7 +160,9 @@ func getUserByID(c *gin.Context) {
 
 
 **NOTES**
+
 For those having this problem when run `swag init`:
 ![Alt text](asset/swag_error.PNG?raw=true "Swagger Error")
+
 Check __$GOPATH__/bin where swag executable is present.
 ![Alt text](asset/swag_init.PNG?raw=true "Swagger init success")
