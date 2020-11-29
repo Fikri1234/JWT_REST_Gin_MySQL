@@ -85,7 +85,7 @@ func main() {
 	port := viper.GetString("PORT")
 
 	docs.SwaggerInfo.Title = "Swagger Example API"
-	docs.SwaggerInfo.Description = "This is a sample server Petstore server."
+	docs.SwaggerInfo.Description = "This is a sample service API documentation."
 	docs.SwaggerInfo.Version = "1.0"
 	docs.SwaggerInfo.Host = "localhost:" + port
 	docs.SwaggerInfo.BasePath = "/api"
