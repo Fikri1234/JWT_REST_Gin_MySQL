@@ -16,7 +16,7 @@ Web service CRUD using Golang with GIN for create REST api, MySQL as database, V
 11. [Swaggo](https://github.com/swaggo/swag)
 
 ## Getting Started
-1. Firstly, we need to get MUX, MySQL, Viper, sqlmock, assert library dependencies and install it
+1. Firstly, we need to get Gin, MySQL, Viper, sqlmock, assert library dependencies and install it
 ```
 go get github.com/gin-gonic/gin
 go get github.com/go-sql-driver/mysql
