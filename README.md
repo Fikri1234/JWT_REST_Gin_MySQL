@@ -15,7 +15,7 @@ Web service CRUD using Golang with GIN for create REST api, MySQL as database, V
 10. [Redis](https://github.com/gomodule/redigo)
 11. [Swaggo](https://github.com/swaggo/swag)
 
-**Getting Started**
+## Getting Started
 1. Firstly, we need to get MUX, MySQL, Viper, sqlmock, assert library dependencies and install it
 ```
 go get github.com/gin-gonic/gin
@@ -40,7 +40,7 @@ go get github.com/gomodule/redigo/redis
 go run main.go
 ```
 
-**Sample Payload**
+## Sample Payload
 1. [Login](asset/login.PNG)
 2. [Logout](asset/logout.PNG)
 3. [Get User By Id](asset/getUserById.PNG)
@@ -56,7 +56,7 @@ go run main.go
 13. [Example error response,in case Update User Detail](asset/updateUserDetailError.PNG)
 
 
-**Implement Swaggo Documentation**
+## Implement Swaggo Documentation
 1. Open project directory which contains the `main.go`. Generate the swagger docs with the `swag init` command that wrap in the bash `.\swaggo.sh`
 
 ![Alt text](asset/swag_init_sh.PNG?raw=true "Swagg init")
@@ -160,7 +160,7 @@ func getUserByID(c *gin.Context) {
 
 
 
-**NOTES**
+### NOTES
 
 For those having this problem when run `swag init`:
 ![Alt text](asset/swag_error.PNG?raw=true "Swagger Error")
