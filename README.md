@@ -84,15 +84,15 @@ func main() {
 
 	port := viper.GetString("PORT")
 
-	docs.SwaggerInfo.Title = "Swagger Example API"
-	docs.SwaggerInfo.Description = "This is a sample service API documentation."
+	docs.SwaggerInfo.Title = "Swagger Service API"
+	docs.SwaggerInfo.Description = "This is service API documentation."
 	docs.SwaggerInfo.Version = "1.0"
 	docs.SwaggerInfo.Host = "localhost:" + port
 	docs.SwaggerInfo.BasePath = "/api"
 	docs.SwaggerInfo.Schemes = []string{"http", "https"}
 
 	// Setup router
-	router := router.NewRoutes(docs.SwaggerInfo.BasePath)
+	router := router.NewRoutes()
 	url := swgGin.URL("http://localhost:" + port + "/swagger/doc.json")
 	router.GET("/swagger/*any", swgGin.WrapHandler(swgFiles.Handler, url))
 
