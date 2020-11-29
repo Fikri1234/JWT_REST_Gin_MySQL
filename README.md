@@ -58,6 +58,7 @@ go run main.go
 
 **Implement Swaggo Documentation**
 1. Open project directory which contains the `main.go`. Generate the swagger docs with the `swag init` command that wrap in the bash `.\swaggo.sh`
+
 ![Alt text](asset/swag_init_sh.PNG?raw=true "Swagg init")
 
 2. Import __swaggo__ dependencies:
