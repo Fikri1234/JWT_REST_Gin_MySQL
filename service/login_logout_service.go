@@ -20,9 +20,21 @@ func RoutesLoginLogout(rg *gin.RouterGroup) {
 	cred := rg.Group("/")
 
 	cred.POST("login", getUserLogin)
-	cred.POST("logout", getUserLogout)
+	cred.GET("logout", getUserLogout)
 }
 
+// getUserLogin godoc
+// @Summary Auth user
+// @Description login user
+// @Accept  json
+// @Produce  json
+// @Param user body CredentialsLogin true "Input username & password"
+// @Success 200 {object} util.TokenDetails
+// @Failure 400 {string} string
+// @Failure 401 {string} string
+// @Failure 404 {string} string
+// @Failure 500 {string} string
+// @Router /login [post]
 func getUserLogin(c *gin.Context) {
 
 	var creds CredentialsLogin
@@ -60,6 +72,18 @@ func getUserLogin(c *gin.Context) {
 	c.JSON(http.StatusOK, jwt)
 }
 
+// getUserLogout godoc
+// @Summary Logout
+// @Description logout
+// @Tags Logout
+// @Accept  json
+// @Produce  json
+// @Success 200 {string} string
+// @Failure 400 {string} string
+// @Failure 404 {string} string
+// @Failure 500 {string} string
+// @Security bearerAuth
+// @Router /logout [get]
 func getUserLogout(c *gin.Context) {
 
 	accessDetails, err := util.ExtractFromRedis(c.Request)
