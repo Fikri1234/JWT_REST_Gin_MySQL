@@ -1,10 +1,12 @@
 DB:
   USER_NAME: "root"
   PASSWORD: "P@ssw0rd"
-  HOST_NAME: "localhost:3306"
+  # HOST_NAME: "localhost:3306"
+  HOST_NAME: "db:3306"
   NAME: "ms_account_dev"
 REDIS:
-  DSN: "127.0.0.1:6379"
+  # DSN: "127.0.0.1:6379"
+  DSN: "redis:6379"
   MAX_ACTIVE: 50
   MAX_IDLE: 1000
 JWT:
