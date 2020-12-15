@@ -32,10 +32,11 @@ go get github.com/gomodule/redigo/redis
 3. After you download Redis, you’ll need to extract the executables and then double-click on the redis-server executable.
 4. Import dump.sql to your MySQL and configure your credential in folder resource
 ![Alt text](asset/configureCredentialDB.PNG?raw=true "Configure your credential DB")
-5. Open cmd in your project directory and type `go test -v` , you should get a response similar to the following:
+5. Open cmd and type `setx APP_ENVIRONMENT STAGING` for default environment
+6. Open cmd in your project directory and type `go test -v` , you should get a response similar to the following:
 ![Alt text](asset/testing_gin.PNG?raw=true "Response Unit Testing")
 
-6. To run application,open cmd in your project directory and type
+7. To run application,open cmd in your project directory and type
 ```
 go run main.go
 ```

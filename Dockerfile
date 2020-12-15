@@ -32,6 +32,7 @@ CMD ["./JWT_REST_Gin_MySQL"]
 # select host, user from user;
 # alter user 'root'@'%' identified with mysql_native_password by 'your_strong_pass';
 # flush privileges;
+# import / execute dump sql
 
-# ==== image db Redis
+# ==== image Redis
 # docker run --name my-image-redis -d redis
